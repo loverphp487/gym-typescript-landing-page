@@ -1,6 +1,4 @@
-import React from "react";
 import Logo from "../assets/Logo.png";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 type Props = {};
 

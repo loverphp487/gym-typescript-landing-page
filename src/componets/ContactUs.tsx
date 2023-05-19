@@ -1,4 +1,3 @@
-import React from "react";
 import ContactUsPageGraphic from "@/assets/ContactUsPageGraphic.png";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { motion } from "framer-motion";

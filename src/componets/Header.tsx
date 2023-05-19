@@ -4,15 +4,13 @@ import Logo from "../assets/Logo.png";
 import useMediaQuery from "../hooks/useMediaQuery";
 import useScroll from "../hooks/useScroll";
 
-type Props = {};
-
-const Header = (props: Props) => {
+const Header = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(false);
 
   let matches = useMediaQuery("(min-width:1023px)");
   let changeColor = useScroll();
 
-  const handleScroll = useCallback((elem, ev) => {
+  const handleScroll = useCallback((elem: any, ev: any) => {
     const element = document.querySelector(elem);
 
     const bodyRect = document.body?.getBoundingClientRect(),

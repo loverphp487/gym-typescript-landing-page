@@ -1,4 +1,3 @@
-import React from "react";
 import {
   HomeModernIcon,
   UserGroupIcon,
@@ -10,7 +9,7 @@ import { motion } from "framer-motion";
 import Benefit from "../shared/Benefit";
 
 type BenefitType = {
-  icon: React.ReactNode;
+  icon: JSX.Element;
   title: string;
   description: string;
 };
@@ -60,7 +59,7 @@ function Benefits() {
           </p>
         </motion.div>
         <div className="mb-5 flex flex-col items-center justify-between gap-20 text-center md:flex-row">
-          {benefits?.map((item) => (
+          {benefits?.map((item: BenefitType) => (
             <Benefit key={item.title} {...item} />
           ))}
         </div>
@@ -80,7 +79,7 @@ function Benefits() {
               }}
             >
               <HText>
-                MILLIONS OF HAPPY MEMBERS GETTING{" "}
+                MILLIONS OF HAPPY MEMBERS GETTING
                 <span className="text-primary-500">FIT</span>
               </HText>
             </motion.div>
