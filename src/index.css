@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-accent: 0 128 128;
+  }
+}
+
+html,
+body,
+#root,
+.app {
+  height: 100%;
+  width: 100%;
+  font-family: "DM Sans", sans-serif;
+  @apply text-gray-500;
+  scroll-behavior: smooth;
+}
+
+@layer components {
+  .links {
+    @apply relative inline-block capitalize text-black transition-all duration-300 hover:text-red-700;
+  }
+
+  .links::after {
+    content: "";
+    display: block;
+    margin: auto;
+    height: 3px;
+    width: 0px;
+    @apply bg-transparent transition-all duration-300;
+  }
+
+  .links:hover:after {
+    width: 100%;
+    @apply bg-blue-800;
+  }
+
+  .images::-webkit-scrollbar-thumb,
+  .images::-webkit-scrollbar {
+    height: 10px;
+    border-radius: 13px;
+    border: 3px solid transparent;
+  }
+
+  .images::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 0 10px;
+  }
+
+  .images {
+    @apply text-red-700;
+  }
+}
