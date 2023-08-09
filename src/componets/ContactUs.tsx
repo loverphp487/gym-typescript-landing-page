@@ -1,4 +1,5 @@
-import ContactUsPageGraphic from "@/assets/ContactUsPageGraphic.png";
+// import ContactUsPageGraphic from "@/assets/ContactUsPageGraphic.png";
+import StrongManTrainIngGym from "@/assets/strong-man-training-in-gym.webp";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { motion } from "framer-motion";
 
@@ -102,9 +103,9 @@ const ContactUs = () => {
         </div>
 
         <motion.img
-          src={ContactUsPageGraphic}
+          src={StrongManTrainIngGym}
           alt=""
-          className="mt-10 lg:mt-32 "
+          className="mt-10 rounded shadow lg:mt-32"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
@@ -113,6 +114,8 @@ const ContactUs = () => {
             hidden: { opacity: 0, y: 50 },
             visible: { opacity: 1, y: 0 },
           }}
+          width={412}
+          height={448}
         />
       </div>
     </div>

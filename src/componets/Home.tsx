@@ -1,18 +1,19 @@
 import HomePageText from "@/assets/HomePageText.png";
-import HomePageGraphic from "@/assets/HomePageGraphic.png";
+// import HomePageGraphic from "@/assets/HomePageGraphic.png";
 import SponsorRedBull from "@/assets/SponsorRedBull.png";
 import SponsorForbes from "@/assets/SponsorForbes.png";
 import SponsorFortune from "@/assets/SponsorFortune.png";
+import GymDesign from "@/assets/gymdesign.webp";
 import useMediaQuery from "../hooks/useMediaQuery";
 import { motion } from "framer-motion";
 
 function Home() {
   let matches = useMediaQuery("(min-width:1023px)");
   return (
-    <div className="relative mt-[70px] min-h-full w-full items-center bg-gray-20">
-      <div className="home mx-auto w-5/6 py-8">
-        <div className="flex flex-col-reverse items-center justify-between gap-10 md:flex-row md:gap-20 ">
-          <div className="z-10 flex basis-2/5 flex-col">
+    <div className="relative flex h-full min-h-screen w-full flex-col bg-gray-20">
+      <div className="home mx-auto flex w-5/6 flex-1 justify-center py-8">
+        <div className="flex flex-col-reverse items-end sm:flex-row  sm:gap-10 md:items-center md:gap-20 lg:justify-between ">
+          <div className="z-10 flex  basis-2/5 flex-col">
             <motion.div
               className="relative"
               initial="hidden"
@@ -37,7 +38,7 @@ function Home() {
               }}
               transition={{ type: "spring", stiffness: 100, duration: 0.7 }}
             >
-              <p className="mt-8 text-sm">
+              <p className="mt-2 text-sm lg:mt-8">
                 Unrivaled Gym. Unparalleled Training Fitness Classes. World
                 Class Studios to get the Body Shapes That you Dream of.. Get
                 Your Dream Body Now.
@@ -52,7 +53,7 @@ function Home() {
                 visible: { opacity: 1, x: 0 },
               }}
               transition={{ type: "spring", stiffness: 100, duration: 0.9 }}
-              className="mt-8 flex items-center gap-8"
+              className="mt-2 flex items-center gap-8 lg:mt-8"
             >
               <button className="rounded bg-orange-500 p-2 capitalize text-white shadow">
                 Join Now
@@ -75,16 +76,20 @@ function Home() {
             }}
             whileHover={{ scale: 1.2 }}
             whileTap={{ scale: 0.8 }}
-            className="z-20 flex basis-1/2 items-center justify-end"
+            className="z-20 flex basis-[40%] items-center justify-end sm:basis-1/2"
           >
-            <img alt="home-pageGraphic" src={HomePageGraphic} />
+            <img
+              alt="home-pageGraphic"
+              src={GymDesign}
+              className="rounded shadow"
+            />
           </motion.div>
         </div>
       </div>
       {matches && (
-        <div className="h-[130px] w-full bg-primary-300 py-10">
+        <div className="mt-auto h-[100px] w-full bg-primary-300 pt-7">
           <div className="mx-auto w-5/6">
-            <div className="flex items-start gap-8">
+            <div className="flex items-center gap-8">
               <motion.img
                 alt="redbull-sponsor"
                 src={SponsorRedBull}
@@ -100,6 +105,7 @@ function Home() {
                     restDelta: 0.001,
                   },
                 }}
+                width={80}
               />
               <motion.img
                 alt="forbes-sponsor"
@@ -116,6 +122,7 @@ function Home() {
                     restDelta: 0.001,
                   },
                 }}
+                width={80}
               />
               <motion.img
                 alt="fortune-sponsor"
@@ -132,6 +139,7 @@ function Home() {
                     restDelta: 0.001,
                   },
                 }}
+                width={80}
               />
             </div>
           </div>

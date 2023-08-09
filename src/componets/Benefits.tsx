@@ -3,7 +3,8 @@ import {
   UserGroupIcon,
   AcademicCapIcon,
 } from "@heroicons/react/24/solid";
-import BenefitsPageGraphic from "@/assets/BenefitsPageGraphic.png";
+// import BenefitsPageGraphic from "@/assets/BenefitsPageGraphic.png";
+import TotalBodyGym from "@/assets/Total-Body-Gym-Workout.jpg";
 import HText from "../shared/HText";
 import { motion } from "framer-motion";
 import Benefit from "../shared/Benefit";
@@ -65,7 +66,13 @@ function Benefits() {
         </div>
       </div>
       <div className="mx-auto mt-10 flex w-5/6 flex-col items-center justify-between gap-28 py-5 md:flex-row">
-        <img src={BenefitsPageGraphic} alt="" />
+        <img
+          src={TotalBodyGym}
+          alt=""
+          width={490}
+          height={553}
+          className="rounded shadow"
+        />
         <div className="relative py-10">
           <div className="before:absolute before:-left-3 before:-top-10 before:z-[1] before:content-abstractwaves sm:before:-left-10">
             <motion.div
